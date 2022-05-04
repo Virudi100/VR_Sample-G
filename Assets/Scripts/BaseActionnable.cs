@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BaseActionnable : MonoBehaviour
 {
-    public XRGrabInteractable interactable;
+    public XRBaseInteractable interactable;
     public bool actionInstantanee = true;
     public bool isSelected = false;
     public Transform interactorTransform;
@@ -27,7 +27,7 @@ public class BaseActionnable : MonoBehaviour
         if(!actionInstantanee)
         {
             isSelected = true;
-            interactorTransform = args.interactableObject.transform;
+            interactorTransform = args.interactorObject.transform;
         }
         else
         {

@@ -19,25 +19,25 @@ public class Door : BaseActionnable
 
     protected override void ActionContinue(Vector3 interatorPosition)
     {
-        base.ActionContinue(interatorPosition);
-        if (prevPositionY == Vector3.zero)
-        {
+            base.ActionContinue(interatorPosition);
+
+            if (prevPositionY == Vector3.zero)
+            {
+                prevPositionY = interatorPosition;
+            }
+
+            Vector3 dc1 = prevPositionY - pivotPorte.position; //precedente position - point de pivot
+            Vector3 dc2 = interatorPosition - pivotPorte.position; //position actuel - point de pivot
+
+            float delta = Vector3.SignedAngle(dc1, dc2, Vector3.up);
+            print("delta: " + delta);
+
+            transform.position = basePosition;
             prevPositionY = interatorPosition;
-        }
-        Vector3 dc1 = prevPositionY-pivotPorte.position; //precedente position - point de pivot
-        Vector3 dc2 = interatorPosition-pivotPorte.position; //position actuel - point de pivot
 
-        float delta = Vector3.SignedAngle(dc1, dc2, Vector3.up);
-        print("delta: " + delta);
+            transform.localRotation = Quaternion.Euler(baseRotation.x, Mathf.Clamp(transform.localEulerAngles.y + delta * 2, 272f, 359f), baseRotation.z);
 
-        transform.position = basePosition;
-        prevPositionY = interatorPosition;
-
-        //transform.rotation = Quaternion.Euler(baseRotation.x, Mathf.Clamp(transform.localEulerAngles.y + delta, baseRotation.y - 0.1f, baseRotation.y), transform.localEulerAngles.z);
-        transform.rotation = Quaternion.Euler(baseRotation.x, transform.localEulerAngles.y + delta, baseRotation.z);
-
-        //mettre en simple
+            //transform.rotation = Quaternion.Euler(baseRotation.x, transform.localEulerAngles.y + delta * 2, baseRotation.z);     
     }
-
 }
     
