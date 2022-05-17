@@ -1,12 +1,10 @@
 fileFormatVersion: 2
-guid: e66b69f21cad3524093804ff9abc1655
+guid: 46845914f2b934445a829bd9ccd92dc7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - interactable: {instanceID: 0}
-  - interactorTransform: {instanceID: 0}
-  - myData: {fileID: 11400000, guid: 97d7504ca7edec24faa5d4625a0c62e4, type: 2}
+  - myDatas: {fileID: 11400000, guid: 97d7504ca7edec24faa5d4625a0c62e4, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

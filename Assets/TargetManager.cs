@@ -5,24 +5,26 @@ using UnityEngine.UI;
 
 public class TargetManager : MonoBehaviour
 {
-    private int score = 0;
     [SerializeField] private AudioSource goal;
     [SerializeField] private Text scoreUI;
     [SerializeField] private Material lightGreen;
     [SerializeField] private Material lightRed;
     [SerializeField] private GameObject lightTarget;
 
+    [SerializeField] private Data myData;
+
     private void Start()
     {
         lightTarget.GetComponent<Renderer>().material = lightGreen;
         RefreshScore();
+        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("Object"))
         {
-            score++;
+            myData.scoreTarget++;
             RefreshScore();
             goal.Play();
             StartCoroutine(LedGoal());
@@ -31,7 +33,7 @@ public class TargetManager : MonoBehaviour
 
     private void RefreshScore()
     {
-            scoreUI.text = score.ToString();
+            scoreUI.text = myData.scoreTarget.ToString();
     }
 
     IEnumerator LedGoal()

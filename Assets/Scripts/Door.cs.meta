@@ -3,7 +3,11 @@ guid: 65c61221680b392468d3326f6719684f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - interactable: {instanceID: 0}
+  - interactorTransform: {instanceID: 0}
+  - pivotPorte: {instanceID: 0}
+  - myData: {fileID: 11400000, guid: 97d7504ca7edec24faa5d4625a0c62e4, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

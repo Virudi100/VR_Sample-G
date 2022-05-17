@@ -16,6 +16,5 @@ public class UseWall : BaseActionnable
     {
         base.StartSelect(args);
         canvasButton.SetActive(true);
-
     }
 }

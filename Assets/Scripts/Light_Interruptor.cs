@@ -7,10 +7,22 @@ public class Light_Interruptor : BaseActionnable
 {
     [SerializeField] private GameObject light;
     [SerializeField] private GameObject plafonnier;
+    [SerializeField] private Data myData;
+
+    private void Start()
+    {
+        if (myData.interruptorUsed == true)
+        {
+            light.SetActive(true);
+        }
+        else
+            light.SetActive(false);
+    }
 
     protected override void StartSelect(SelectEnterEventArgs args)
     {
-        print("Enter light selected");
+        myData.interruptorUsed = true;
+
         if(light.activeInHierarchy)
         {
             light.SetActive(false);
@@ -21,5 +33,10 @@ public class Light_Interruptor : BaseActionnable
             light.SetActive(true);
             plafonnier.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         }
+    }
+
+    protected override void StopSelect(SelectExitEventArgs args)
+    {
+        myData.interruptorUsed = false;
     }
 }

@@ -13,7 +13,6 @@ public class ColorButton : MonoBehaviour
     private void Start()
     {
         colorToApply = gameObject.GetComponent<Image>().color;
-        
     }
 
     public void Exit()

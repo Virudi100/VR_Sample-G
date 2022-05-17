@@ -46,7 +46,6 @@ public class BaseActionnable : MonoBehaviour
     protected virtual void ActionInstant()
     {
 
-
     }
 
     protected virtual void ActionContinue(Vector3 interatorPosition)

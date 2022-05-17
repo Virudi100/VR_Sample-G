@@ -710,7 +710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94db95d851707f94c858b7349331065f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interatable: {fileID: 0}
+  interatable: {fileID: 1506600629401963953}
   hoverMat: {fileID: 0}
   objetToHover: {fileID: 0}
   simpleInteractable: {fileID: 1506600629401963953}
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94db95d851707f94c858b7349331065f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interatable: {fileID: 0}
+  interatable: {fileID: 1506600629613494156}
   hoverMat: {fileID: 0}
   objetToHover: {fileID: 0}
   simpleInteractable: {fileID: 1506600629613494156}
@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94db95d851707f94c858b7349331065f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interatable: {fileID: 0}
+  interatable: {fileID: 1506600629665038616}
   hoverMat: {fileID: 0}
   objetToHover: {fileID: 0}
   simpleInteractable: {fileID: 1506600629665038616}
