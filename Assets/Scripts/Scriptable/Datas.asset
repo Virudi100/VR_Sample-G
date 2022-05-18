@@ -13,20 +13,16 @@ MonoBehaviour:
   m_Name: Datas
   m_EditorClassIdentifier: 
   doorLocation: {x: 0, y: 0, z: 0}
-  doorRotation: {x: -0, y: 0, z: 0}
+  doorRotation: {x: 0, y: 0, z: 0}
   tiroirHautLocation: {x: 0, y: 0, z: 0}
-  tiroirHautRotation: {x: -0, y: 0, z: 0}
+  tiroirHautRotation: {x: 0, y: 0, z: 0}
   tiroirBasLocation: {x: 0, y: 0, z: 0}
-  tiroirBasRotation: {x: -0, y: 0, z: 0}
-  ballLocation: {x: 0, y: 0, z: 0}
-  ballRotation: {x: 0, y: 0, z: 0}
-  cubeLocation: {x: 0, y: 0, z: 0}
-  cubeRotation: {x: 0, y: 0, z: 0}
-  lamaLocation: {x: 0, y: 0, z: 0}
-  lamaRotation: {x: 0, y: 0, z: 0}
-  interruptorUsed: 1
-  wallDoorMat: {fileID: 0}
-  wallMeubleMat: {fileID: 0}
-  wallWindowMat: {fileID: 0}
-  wallTargetMat: {fileID: 0}
+  tiroirBasRotation: {x: 0, y: 0, z: 0}
+  ballLocation: {x: 1.599, y: 0.1, z: 0.681}
+  ballRotation: {x: -0, y: 0, z: 0}
+  cubeLocation: {x: -0.4568574, y: 0.049999993, z: 1.4827161}
+  cubeRotation: {x: -0.000004885969, y: 356.56274, z: 0.000036420282}
+  lamaLocation: {x: 0.64525753, y: 0.00000016391277, z: 0.8081884}
+  lamaRotation: {x: -0.000920493, y: 216.36328, z: 0.00047961914}
+  interruptorUsed: 0
   scoreTarget: 0

@@ -9,12 +9,12 @@ public class UseWall : BaseActionnable
 
     private void Start()
     {
-        canvasButton.SetActive(false);
+        canvasButton.SetActive(false);      //Desactive l'affichage au demarrage
     }
 
     protected override void StartSelect(SelectEnterEventArgs args)
     {
         base.StartSelect(args);
-        canvasButton.SetActive(true);
+        canvasButton.SetActive(true);       //active l'affichage a l'interaction
     }
 }

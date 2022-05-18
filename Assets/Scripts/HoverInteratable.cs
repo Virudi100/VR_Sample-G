@@ -5,10 +5,19 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HoverInteratable : MonoBehaviour
 {
+    [Header("XRInteractable")]
     [SerializeField] private XRBaseInteractable interatable;
+
+    [Header("Bool if the object is on hover")]
     private bool isHover = false;
+
+    [Header("recupere le matérial de base")]
     private Material defaultMat;
+
+    [Header("Material de hover")]
     [SerializeField] private Material hoverMat;
+
+    [Header("Recupere l'objet a hover")]
     [SerializeField] private Renderer objetToHover;
 
 

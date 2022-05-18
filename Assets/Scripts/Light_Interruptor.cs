@@ -5,13 +5,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Light_Interruptor : BaseActionnable
 {
+    [Header("Light componant")]
     [SerializeField] private GameObject light;
     [SerializeField] private GameObject plafonnier;
+
+    [Header("Base de donnée")]
     [SerializeField] private Data myData;
 
     private void Start()
     {
-        if (myData.interruptorUsed == true)
+        if (myData.interruptorUsed == true)     //si l'interrupteur est eteint dans la base de donnée il s'allume et l'inverse
         {
             light.SetActive(true);
         }
@@ -21,9 +24,9 @@ public class Light_Interruptor : BaseActionnable
 
     protected override void StartSelect(SelectEnterEventArgs args)
     {
-        myData.interruptorUsed = true;
+        myData.interruptorUsed = true;      //change la valeur dans la base de donnée
 
-        if(light.activeInHierarchy)
+        if(light.activeInHierarchy)         //quand on utilise l'interrupteur, eteint la lumiere si elle est allumé et l'inverse
         {
             light.SetActive(false);
             plafonnier.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
@@ -37,6 +40,6 @@ public class Light_Interruptor : BaseActionnable
 
     protected override void StopSelect(SelectExitEventArgs args)
     {
-        myData.interruptorUsed = false;
+        myData.interruptorUsed = false;         //change la valeur dans la base de donnée
     }
 }

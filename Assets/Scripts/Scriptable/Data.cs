@@ -31,13 +31,6 @@ public class Data : ScriptableObject
     [Header("Save Light Interruptor")]
     public bool interruptorUsed = false;
 
-    /*[Header("Save Wall Matérial")]
-    public Material wallDoorMat;
-    public Material wallMeubleMat;
-    public Material wallWindowMat;
-    public Material wallTargetMat;
-    */
-
     [Header("Save Score Target")]
     public int scoreTarget;
 }

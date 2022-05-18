@@ -5,9 +5,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BaseActionnable : MonoBehaviour
 {
+    [Header("XRInteractable")]
     public XRBaseInteractable interactable;
+
+    [Header("Is action instantanée ?")]
     public bool actionInstantanee = true;
+
+    [Header("Current objet is actualy being use ? ")]
     public bool isSelected = false;
+
+    [Header("Transform de l'interactor")]
     public Transform interactorTransform;
 
     private void OnEnable()
@@ -24,7 +31,7 @@ public class BaseActionnable : MonoBehaviour
 
     protected virtual void StartSelect(SelectEnterEventArgs args)
     {
-        if(!actionInstantanee)
+        if(!actionInstantanee)      
         {
             isSelected = true;
             interactorTransform = args.interactorObject.transform;
